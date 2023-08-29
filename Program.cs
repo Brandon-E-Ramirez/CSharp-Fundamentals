@@ -1,8 +1,9 @@
 ﻿//syntax
 using System;
+using System.Security;
 /* multiline comment
- * review C# fundamentals 
- */
+* review C# fundamentals 
+*/
 namespace HelloWorld
 {
     class Program
@@ -38,8 +39,32 @@ namespace HelloWorld
             Console.Write("x value: ");
             x = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Your input: " + x);
+            //operators
+            /*
+            + 	Addition 	Adds together two values 	x + y 	
+            - 	Subtraction 	Subtracts one value from another 	x - y 	
+            * 	Multiplication 	Multiplies two values 	x * y 	
+            / 	Division 	Divides one value by another 	x / y 	
+            % 	Modulus 	Returns the division remainder 	x % y 	
+            ++ 	Increment 	Increases the value of a variable by 1 	x++ 	
+            -- 	Decrement 	Decreases the value of a variable by 1 	x--
+            */
+
+            Console.WriteLine("Enter number 1: ");
+            int alpha = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter number 2: ");
+            int beta = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter number 3: ");
+            int gamma = Convert.ToInt32(Console.ReadLine());
+
+            alpha++;
+            beta--;
+            Console.WriteLine("Wild calculation: "+(Math.Pow(Convert.ToDouble(alpha),Convert.ToDouble(beta)) + (alpha - beta) % gamma)*(gamma/(Math.Pow((x%gamma),(beta)))));
+
+
+
 
 
         }
-    }
+}
 }
