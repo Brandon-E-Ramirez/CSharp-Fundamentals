@@ -1,5 +1,6 @@
 ﻿//syntax
 using System;
+using System.Net.NetworkInformation;
 using System.Security;
 /* multiline comment
 * review C# fundamentals 
@@ -61,10 +62,36 @@ namespace HelloWorld
             beta--;
             Console.WriteLine("Wild calculation: "+(Math.Pow(Convert.ToDouble(alpha),Convert.ToDouble(beta)) + (alpha - beta) % gamma)*(gamma/(Math.Pow((x%gamma),(beta)))));
 
+            //assignment operators:
+            /*
+                = 	x = 5 	x = 5 	
+                += 	x += 3 	x = x + 3 	
+                -= 	x -= 3 	x = x - 3 	
+                *= 	x *= 3 	x = x * 3 	
+                /= 	x /= 3 	x = x / 3 	
+                %= 	x %= 3 	x = x % 3 	
+                &= 	x &= 3 	x = x & 3 	//OR
+                |= 	x |= 3 	x = x | 3 	//AND
+                ^= 	x ^= 3 	x = x ^ 3   //XOR
+                >>= 	x >>= 3 	x = x >> 3 	Right shift AND assignment
+                <<= 	x <<= 3 	x = x << 3  Left shift AND assignment
+            */
 
+            alpha += 10;
+            beta -= alpha;
+            gamma *= beta %= alpha;
+            alpha &= gamma |= beta;
+            Console.WriteLine("Updated alpha value: " + (float)alpha);
+
+            int value = 8;
+            string binary = Convert.ToString(value, 2);//chnaging base to binary
+            Console.WriteLine(value + " in binary is: " + binary);
+            value >>= 2;
+            Console.WriteLine(value + " shifted right by 4 digits in binary is: " + binary);
+            Console.WriteLine("This is " + Convert.ToString(value,10) +" as an integer");
 
 
 
         }
-}
+    }
 }
