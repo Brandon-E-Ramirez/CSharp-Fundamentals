@@ -113,7 +113,20 @@ namespace HelloWorld
             Console.WriteLine(!(alpha > beta && (gamma < value)));
 
             //https://www.w3schools.com/cs/cs_math.php
-            
+            Console.WriteLine(Math.Max(3, 9)); 
+            Console.WriteLine(Math.Min(-4, 0)); 
+            Console.WriteLine(Math.Sqrt(144));  
+            Console.WriteLine(Math.Abs(-2556.3));  
+            Math.Round(31.50);
+            Console.WriteLine(Math.PI);
+            Console.WriteLine(Math.E);
+            Console.WriteLine(Math.Cbrt(27));
+            int stock = 10;
+            Console.WriteLine(Math.Clamp(stock, 5, 15));
+            Console.WriteLine(Math.Ceiling(4.235));
+            Console.WriteLine(Math.Floor(4.235));
+            Console.WriteLine(Math.Cbrt(27));
+            Console.WriteLine(Math.Pow(2, 5));
 
         }
     }
