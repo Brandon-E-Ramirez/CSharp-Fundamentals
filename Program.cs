@@ -128,6 +128,42 @@ namespace HelloWorld
             Console.WriteLine(Math.Cbrt(27));
             Console.WriteLine(Math.Pow(2, 5));
 
+
+            https://www.w3schools.com/cs/cs_strings.php
+            string firstName = "Brandon";
+            string lastName = "Ramirez";
+            Console.WriteLine(firstName + lastName);
+
+            string name = string.Concat(firstName, lastName);
+            Console.WriteLine(name);
+            
+            string txt = "C# is nice";
+            Console.WriteLine("txt is " + txt.Length + "characters long.");
+            Console.WriteLine(txt.ToUpper() + " " + txt.ToLower()); 
+
+            string x = "20";
+            string y = "48";
+            string z = x + y;  // z will be 2048 (a string)
+            //interpolation
+            string name = $"My full name is: {firstName} {lastName}";
+            Console.WriteLine(name);
+
+            Console.WriteLine(name[0]);
+            Console.WriteLine(name.IndexOf("e"));
+
+            // Location of :
+            int charPos = name.IndexOf(":");
+            
+            // Get full name + ": "
+            string fName = name.Substring(charPos);
+            // Print the result
+            Console.WriteLine(fName);
+
+            
+
+            
+            
+
         }
     }
 }
