@@ -138,14 +138,14 @@ namespace HelloWorld
             Console.WriteLine(name);
             
             string txt = "C# is nice";
-            Console.WriteLine("txt is " + txt.Length + "characters long.");
+            Console.WriteLine("txt is " + txt.Length + "characters long.\n");
             Console.WriteLine(txt.ToUpper() + " " + txt.ToLower()); 
 
             string x = "20";
             string y = "48";
             string z = x + y;  // z will be 2048 (a string)
             //interpolation
-            string name = $"My full name is: {firstName} {lastName}";
+            string name = $"My full name is: {firstName} {lastName}\n";
             Console.WriteLine(name);
 
             Console.WriteLine(name[0]);
@@ -160,7 +160,25 @@ namespace HelloWorld
             Console.WriteLine(fName);
 
             
+            bool isAGuy = true;
+            bool isRetired = false;
+            Console.WriteLine(isAGuy); 
+            Console.WriteLine(isRetired);   
 
+            Console.WriteLine("Enter int value \"zetta\":");
+            int zetta = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter int value \"yotta\":");
+            int yotta = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Yotta greater than zetta? ...\n");
+    
+            if (yotta > zetta) 
+            {
+              Console.WriteLine("\nTrue");
+            } 
+            else 
+            {
+              Console.WriteLine("\nFalse");
+            }
             
             
 
