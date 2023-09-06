@@ -159,7 +159,7 @@ namespace HelloWorld
             // Print the result
             Console.WriteLine(fName);
 
-            
+            //booleans
             bool isAGuy = true;
             bool isRetired = false;
             Console.WriteLine(isAGuy); 
@@ -180,7 +180,26 @@ namespace HelloWorld
               Console.WriteLine("\nFalse");
             }
             
-            
+            //control structures
+            Console.WriteLine("Enter your age (int): ");
+            int voterAge = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Citizen? (int[0 or 1]): ");
+            bool isCitizen = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("If not citizen, are you petitioning to be one? (int[0 or 1]): ");
+            bool isPetitioning = Convert.ToInt32(Console.ReadLine());
+if (voterAge > 18 && isCitizen) 
+{
+  Console.WriteLine("You may vote!");
+} else if (voterAge > 18 && isPetitioning){
+    Console.WriteLine("You may vote soon!");
+}else{
+ Console.WriteLine("Try again in 4 years!");
+}
+
+
+            //ternary operator
+            string ageResult = (age > 18) ? "Remember to register to vote!" : "You are too younf to register!";
+            Console.WriteLine(ageResult);
 
         }
     }
