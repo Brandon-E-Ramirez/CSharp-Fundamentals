@@ -187,19 +187,52 @@ namespace HelloWorld
             bool isCitizen = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("If not citizen, are you petitioning to be one? (int[0 or 1]): ");
             bool isPetitioning = Convert.ToInt32(Console.ReadLine());
-if (voterAge > 18 && isCitizen) 
-{
-  Console.WriteLine("You may vote!");
-} else if (voterAge > 18 && isPetitioning){
-    Console.WriteLine("You may vote soon!");
-}else{
- Console.WriteLine("Try again in 4 years!");
-}
+            
+            if (voterAge > 18 && isCitizen) 
+            {
+              Console.WriteLine("You may vote!");
+            } else if (voterAge > 18 && isPetitioning){
+                Console.WriteLine("You may vote soon!");
+            }else{
+             Console.WriteLine("Try again in 4 years!");
+            }
 
 
             //ternary operator
             string ageResult = (age > 18) ? "Remember to register to vote!" : "You are too younf to register!";
             Console.WriteLine(ageResult);
+
+
+            https://www.w3schools.com/cs/cs_switch.php
+            Console.WriteLine("Enter season (spring, summer, autumn, winter): ");
+            string season = Convert.ToString(Console.ReadLine());
+            season = season.ToLower()
+                
+            switch(season) 
+            {
+            case "spring":
+            Console.WriteLine("Wear a long sleve or t-shirt, nice weather!");
+            break;
+            case "summer":
+            Console.WriteLine("Drink pleanty of water and wear a t-shirt!");
+            break;
+            
+            case "autumn":
+            Console.WriteLine("It's nice and cool, turkey time :)");
+            break;
+            case "winter":
+            Console.WriteLine("We will survive this");
+            break;
+            default:
+            Console.WriteLine("Wrong input, try again!");
+            break;
+            }
+
+
+            
+
+
+            
 
         }
     }
